@@ -2,4 +2,4 @@ streamlit
 openai
 PyMuPDF
 python-dotenv
-    
+openpyxl    
