@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()  # ← Dòng này bắt buộc phải có
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def ask_chatgpt(question, context=""):
     prompt = f"""
@@ -17,7 +17,7 @@ def ask_chatgpt(question, context=""):
     """
 
     response = client.chat.completions.create(
-        model="gpt-4",  # hoặc gpt-3.5-turbo
+        model="gpt-3.5-turbo",  # hoặc gpt-3.5-turbo
         messages=[
             {"role": "user", "content": prompt}
         ],
